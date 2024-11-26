@@ -23,6 +23,7 @@ public class Enemy1 extends Enemies
         isFighting();
         isDead();
         isTouchingBorder();
+<<<<<<< HEAD
     }
     protected void isTouchingBorder(){
         if(healthPoints > 0 && getX() == edgeOfWorld){
@@ -34,4 +35,8 @@ public class Enemy1 extends Enemies
     }
     
     
+=======
+        isTouchingTreasure();
+    }
+>>>>>>> tutorial
 }

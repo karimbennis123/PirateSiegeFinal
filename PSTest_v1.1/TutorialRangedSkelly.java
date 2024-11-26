@@ -1,42 +1,33 @@
-import lang.stride.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
-import greenfoot.*;
-
 /**
+ * Write a description of class TutorialRangedSkelly here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class RangedSkelly extends Crewmen
+public class TutorialRangedSkelly extends Crewmen
 {
     private int timer = 0;
     private int animationCount=0;
     private int soundCount = 0;
     private GreenfootSound fire1 = new GreenfootSound("Fire01.wav");
-<<<<<<< HEAD
-=======
     private GreenfootSound fire2 = new GreenfootSound("Fire02.wav");
->>>>>>> tutorial
     private int healthPoints = 75;
     private long lastActionTime = 0; 
-
-    /**
-     * 
-     */
-    public RangedSkelly()
+    
+    public TutorialRangedSkelly()
     {
         setImage("RangedSkellyGif1.png");
     }
-
     /**
-     * Act - do whatever the RangedSkelly wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the TutorialRangedSkelly wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         fire();
     }
-
-    /**
-     * 
-     */
     public void fire()
     {
         timer++;

@@ -15,7 +15,13 @@ comment5.target=void\ isFighting()
 comment6.params=
 comment6.target=void\ isDead()
 comment7.params=
+<<<<<<< HEAD
 comment7.target=void\ cutScene()
 comment8.params=message\ x\ y
 comment8.target=void\ showText(java.lang.String,\ int,\ int)
+=======
+comment7.target=boolean\ isTouchingBorder()
+comment8.params=
+comment8.target=void\ isTouchingTreasure()
+>>>>>>> tutorial
 numComments=9

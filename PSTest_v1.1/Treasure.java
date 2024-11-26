@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // WARNING: This file is auto-generated and any changes to it will be overwritten
+=======
+>>>>>>> tutorial
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -14,5 +17,9 @@ public class Treasure extends Actor
      */
     public void act()
     {
+<<<<<<< HEAD
+=======
+         
+>>>>>>> tutorial
     }
 }

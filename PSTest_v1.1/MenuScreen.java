@@ -7,7 +7,11 @@ import greenfoot.*;
  */
 public class MenuScreen extends World
 {
+<<<<<<< HEAD
     GreenfootSound menuSound = new GreenfootSound("MenuSound.wav");
+=======
+
+>>>>>>> tutorial
     /**
      * Constructor for objects of class MenuScreen.
      */
@@ -18,6 +22,9 @@ public class MenuScreen extends World
         addObject(playButton,435,389);
         TutorialButton tutorialButton = new TutorialButton();
         addObject(tutorialButton,433,457);
+<<<<<<< HEAD
         menuSound.play();
+=======
+>>>>>>> tutorial
     }
 }

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // WARNING: This file is auto-generated and any changes to it will be overwritten
+=======
+>>>>>>> tutorial
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -14,5 +17,12 @@ public class TutorialButton extends Actor
      */
     public void act()
     {
+<<<<<<< HEAD
+=======
+        if(Greenfoot.mouseClicked(this)){
+            World Tutorial = new Background2();
+            Greenfoot.setWorld(Tutorial);
+        }
+>>>>>>> tutorial
     }
 }

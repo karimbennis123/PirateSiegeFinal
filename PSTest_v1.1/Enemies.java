@@ -7,19 +7,29 @@ import greenfoot.*;
  */
 public class Enemies extends Actor
 {
+<<<<<<< HEAD
     GreenfootImage shipInteriorImage = new GreenfootImage("ShipInterior.jpg");
     static int enemiesKilled = 0;
+=======
+>>>>>>> tutorial
     protected int bulletDamage = Greenfoot.getRandomNumber(16)+25;
     protected int armouredDamage = Greenfoot.getRandomNumber(11) + 40;
     protected int recruitDamage = Greenfoot.getRandomNumber(11) + 30;
     protected int healthPoints = 100;
     protected int speed;
+<<<<<<< HEAD
     protected int edgeOfWorld = 0;
     protected World shipInterior = new ShipInterior();
     private long lastActionTime = 0;
     private GifImage gif = new GifImage("SmokeScreen.gif");
     GreenfootSound swordDuel = new GreenfootSound("SwordDuel.wav");
     private int timer = 200;
+=======
+    public long lastActionTime = 0;
+    private GifImage gif = new GifImage("SmokeScreen.gif");
+    GreenfootSound swordDuel = new GreenfootSound("SwordDuel.wav");
+    
+>>>>>>> tutorial
     public Enemies(){
     }
     /**
@@ -27,12 +37,22 @@ public class Enemies extends Actor
      */
     public void act()
     {
+<<<<<<< HEAD
+=======
+        if (getWorld() == null) {
+            return; // Prevent further operations if the Actor is removed
+        }
+>>>>>>> tutorial
         
     }
     protected int getSpeed (){
         return speed;
     }
     protected void isShot(){
+<<<<<<< HEAD
+=======
+        if (getWorld() == null) return; // Avoid further action if removed
+>>>>>>> tutorial
         if(isTouching(Bullets.class)){
             healthPoints -= bulletDamage;
             List<Bullets> bullets = getIntersectingObjects(Bullets.class);
@@ -61,14 +81,19 @@ public class Enemies extends Actor
         else if(isTouching(RangedSkelly.class)){
             speed = -1;
         }
+<<<<<<< HEAD
         else if(isTouching(Treasure.class)){
             speed = 0;
             setLocation(getX(), getY());
         }else{
+=======
+        else{
+>>>>>>> tutorial
             speed = -2;
             swordDuel.stop();
         }
     }
+<<<<<<< HEAD
     protected void isDead(){
         if(healthPoints <= 0){
          SmallGoldBar gold = new SmallGoldBar();
@@ -104,3 +129,37 @@ public class Enemies extends Actor
     }
 
 }
+=======
+    public void isDead(){
+        if(healthPoints <= 0){
+         SmallGoldBar gold = new SmallGoldBar();
+         getWorld().addObject(gold, getX() + 100, getY());
+            getWorld().removeObject(this);
+         
+        }
+    }
+    public boolean isTouchingBorder(){
+        if (getWorld() == null) {
+            return false; // No border interaction possible if removed
+        }
+        if (getX() <= 0) {
+            LoseScreen loseScreen = new LoseScreen(this);
+            if (getWorld() != null) { // Ensure the world is still active
+                Greenfoot.setWorld(loseScreen);
+            }
+            return true; // Border touched, return true to indicate interaction
+        }
+
+        return false; // No interaction
+        
+
+    }
+    public void isTouchingTreasure() {
+        if (getWorld() == null) return; // Ensure actor is still in the world
+        if (isTouching(Treasure.class)) {
+             speed = 0;
+        }
+    }
+}
+
+>>>>>>> tutorial

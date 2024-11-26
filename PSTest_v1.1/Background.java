@@ -9,8 +9,12 @@ public class Background extends World
 {
     private Counter counter;
     int timer = 6000;
+<<<<<<< HEAD
     public static GreenfootSound ambiance = new GreenfootSound("Ambiance.wav");
     GreenfootSound wonSound = new GreenfootSound("Won.wav");
+=======
+    GreenfootSound ambiance = new GreenfootSound("Ambiance.wav");
+>>>>>>> tutorial
     /**
      * Constructor for objects of class Background.
      */
@@ -18,15 +22,23 @@ public class Background extends World
     {
         super(848, 600, 1);
         prepare();
+<<<<<<< HEAD
         ambiance.setVolume(100);
         ambiance.playLoop();
         setPaintOrder(SmallGoldBar.class, MainMenuButton.class, ArmouredUpgrade.class, RangedUpgrade.class, ArmouredSkelly.class, RangedSkelly.class, RecruitSkelly.class);
     }
     public void act(){
+=======
+    }
+    public void act(){
+        ambiance.playLoop();
+        
+>>>>>>> tutorial
         timer--;
         
         switch(timer){
             
+<<<<<<< HEAD
             
             case 5999:
                break;
@@ -35,6 +47,11 @@ public class Background extends World
                 spawnEnemies();
                break;
                
+=======
+            case 5900:
+               spawnEnemies();
+               break;
+>>>>>>> tutorial
             
             case 5700:
                 spawnEnemies();
@@ -152,6 +169,7 @@ public class Background extends World
                 spawnEnemies();
                 break;
             
+<<<<<<< HEAD
             case -150:
                 YouWonMessage wonMessage = new YouWonMessage();
                 addObject(wonMessage, 424, 325);
@@ -161,6 +179,10 @@ public class Background extends World
                 wonSound.play();
                 MainMenuButton mainMenu = new MainMenuButton();
                 addObject(mainMenu, 427, 382);
+=======
+            case 0:
+                
+>>>>>>> tutorial
                 
             
         }
@@ -218,6 +240,7 @@ public class Background extends World
     public void spawnEnemies(){
         addObject(getEnemies(), 848, getRandomY());
     }
+<<<<<<< HEAD
     public static void stopAmbiance(){
         ambiance.stop();
     }
@@ -229,4 +252,6 @@ public class Background extends World
         bg.setColor(Color.WHITE);
         bg.drawString(message, x, y);
     }
+=======
+>>>>>>> tutorial
 }

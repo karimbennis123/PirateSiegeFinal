@@ -10,7 +10,11 @@ public class Counter extends Actor
 {
     //private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
+<<<<<<< HEAD
     private static int value;
+=======
+    private int value;
+>>>>>>> tutorial
     //private int target;
     private String prefix;
     
@@ -49,12 +53,20 @@ public class Counter extends Actor
         updateImage();
     }
     
+<<<<<<< HEAD
     public static int getValue() {
+=======
+    public int getValue() {
+>>>>>>> tutorial
         return value;
     }
     
     public void updateImage() {
+<<<<<<< HEAD
         //ChatGPT: I didn't know how to do
+=======
+        
+>>>>>>> tutorial
         // Create a new image with the background image size
         GreenfootImage image = new GreenfootImage(background.getWidth(), background.getHeight());
         
