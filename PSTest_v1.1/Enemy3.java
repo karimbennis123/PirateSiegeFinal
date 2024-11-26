@@ -23,7 +23,6 @@ public class Enemy3 extends Enemies
         isFighting();
         isDead();
         isTouchingBorder();
-<<<<<<< HEAD
     }
     protected void isTouchingBorder(){
         if(healthPoints > 0 && getX() == edgeOfWorld){
@@ -32,8 +31,5 @@ public class Enemy3 extends Enemies
             CrossedEnemy3 crossedEnemy = new CrossedEnemy3();
             shipInterior.addObject(crossedEnemy, 693, 515);
         }
-=======
-        isTouchingTreasure();
->>>>>>> tutorial
     }
 }

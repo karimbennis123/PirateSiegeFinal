@@ -7,7 +7,7 @@ import greenfoot.*;
  */
 public class TutorialAmouredSkelly extends Crewmen
 {
-    private int healthPoints = 125;
+    private int healthPoints = 500;
     private long lastActionTime = 0; 
     
     public TutorialAmouredSkelly()

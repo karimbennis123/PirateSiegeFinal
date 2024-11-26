@@ -13,7 +13,7 @@ public class TutorialRangedSkelly extends Crewmen
     private int soundCount = 0;
     private GreenfootSound fire1 = new GreenfootSound("Fire01.wav");
     private GreenfootSound fire2 = new GreenfootSound("Fire02.wav");
-    private int healthPoints = 75;
+    private int healthPoints = 500;
     private long lastActionTime = 0; 
     
     public TutorialRangedSkelly()

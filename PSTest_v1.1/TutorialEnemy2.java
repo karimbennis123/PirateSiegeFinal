@@ -1,4 +1,6 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+import java.util.*;  
+// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class TutorialEnemy2 here.
@@ -10,6 +12,7 @@ public class TutorialEnemy2 extends Enemies
 {
     GreenfootImage image1 = new GreenfootImage("pirate2_img1.png");
     GifImage gif = new GifImage("pirate2_gif.gif");
+    protected int bulletDamage = Greenfoot.getRandomNumber(16)+100;//OVERRIDE
     public TutorialEnemy2() {
         
     }
@@ -28,8 +31,7 @@ public class TutorialEnemy2 extends Enemies
         isFighting();
         isDead();
         if (getWorld() != null) {
-            isTouchingBorder();
-            isTouchingTreasure();
+            
         }
     }
     public void isFighting(){
@@ -68,6 +70,14 @@ public class TutorialEnemy2 extends Enemies
             getWorld().removeObject(this);
             }
          
+        }
+    }
+    protected void isShot(){//OVERRIDE
+        if (getWorld() == null) return; // Avoid further action if removed
+        if(isTouching(Bullets.class)){
+            healthPoints -= bulletDamage;
+            List<Bullets> bullets = getIntersectingObjects(Bullets.class);
+            getWorld().removeObjects(bullets);
         }
     }
 }

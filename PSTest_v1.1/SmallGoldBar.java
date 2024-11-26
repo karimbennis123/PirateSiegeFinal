@@ -8,10 +8,7 @@ import greenfoot.*;
 public class SmallGoldBar extends Actor
 {
     private int goldValue;
-<<<<<<< HEAD
     static int goldAccumulated;
-=======
->>>>>>> tutorial
     private GreenfootSound coins = new GreenfootSound("coins.wav");
     private GreenfootImage pouch = new GreenfootImage("pouchBag.png");
     
@@ -30,11 +27,7 @@ public class SmallGoldBar extends Actor
             Counter counter = world.getCounter();
             coins.play();
             counter.add(goldValue);
-<<<<<<< HEAD
             goldAccumulated += goldValue;
-=======
-            
->>>>>>> tutorial
             getWorld().removeObject(this);
             
         }

@@ -18,7 +18,7 @@ public class Background2 extends World
         prepare();
         TutorialManager tutorial = new TutorialManager();
         addObject(tutorial, 424, 50);
-        setPaintOrder(GoldBar.class, Counter.class, TutorialArrow.class);
+        setPaintOrder(TutorialSmallGoldBag.class, GoldBar.class, Counter.class, TutorialArrow.class, TutorialAmouredUpgrade.class, TutorialRangedUpgrade.class, TutorialAmouredSkelly.class, TutorialRangedSkelly.class, TutorialRecruitSkelly.class);
     }
     public void act() {
         
@@ -36,6 +36,9 @@ public class Background2 extends World
        
         counter = new Counter("Gold: ");
         addObject(counter, 275, 540);
+        
+        MainMenuButton mainMenu = new MainMenuButton();
+        addObject(mainMenu, 700, 540);
 
         TutorialRecruitSkellyButton button1 =  new  TutorialRecruitSkellyButton(counter);
         addObject(button1, 414, 530);

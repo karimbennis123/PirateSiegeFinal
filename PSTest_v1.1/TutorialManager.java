@@ -12,6 +12,8 @@ public class TutorialManager extends Actor
     private int step = 0;  // Track which step of the tutorial we're on
     private boolean waitingForAction = false;
     private boolean initialized = false;
+    private GreenfootSound milestone = new GreenfootSound("tutorial_milestone.wav");
+    private GreenfootSound ended = new GreenfootSound("tutorial_ended.wav");
     public TutorialManager() {
         
         
@@ -37,6 +39,7 @@ public class TutorialManager extends Actor
         switch (step) {
             case 0: // RecruitSkelly tutorial
                 if (Greenfoot.mouseClicked(getWorld().getObjects(TutorialRecruitSkellyButton.class).get(0))) {
+                    milestone.play();
                     displayMessage("Good job!" + "\n" + " Now, click any Red arrow to place him.");
                     System.out.println("Arrows in the world: " + getWorld().getObjects(TutorialArrow.class).size());
                     step++;
@@ -45,6 +48,7 @@ public class TutorialManager extends Actor
             case 1: // RecruitSkelly tutorial
                 for (TutorialArrow arrow : arrows) {
                     if (Greenfoot.mouseClicked(arrow)) {
+                        milestone.play();
                         System.out.println("Arrow clicked!");
                         displayMessage("Great!" + "\n" + " Place Another Recruit Skelly in the 2nd row");
                         System.out.println("Current counter value: " + counter.getValue());
@@ -54,6 +58,7 @@ public class TutorialManager extends Actor
                 break;
             case 2: //Fighting tutorial
                 if (counter.getValue() <= 0) {
+                    milestone.play();
                     spawnEnemies();
                     displayMessage("Here Comes an Enemy!");
                     step++;
@@ -61,6 +66,7 @@ public class TutorialManager extends Actor
                 break;
             case 3: //Pick up gold tutorial
                 if (enemies.isEmpty()) {
+                    milestone.play();
                     displayMessage("Nice Job!" + "\n" + "Enemies Drop Some Gold. Pick It Up.");
                     step++;
                 }
@@ -76,6 +82,7 @@ public class TutorialManager extends Actor
                 
             case 5: // Upgrading tutorial
                 if (counter.getValue() >= 15) {
+                    milestone.play();
                     displayMessage("\n" + "Upgrade Recruit Skelly By Clicking On Him." + "\n" + "Choose An Armoured Skelly Or A Ranged Skelly." + "\n" + "An Upgrade Costs 15g!");
                     step++;
                 }
@@ -83,6 +90,7 @@ public class TutorialManager extends Actor
             case 6: //More Fighting
                 for (Upgrades upgrade : upgrades) {
                     if (Greenfoot.mouseClicked(upgrade)) {
+                        milestone.play();
                         System.out.println("upgrade clicked!");
                         displayMessage("Good Job!");
                         spawnEnemies();
@@ -94,15 +102,16 @@ public class TutorialManager extends Actor
                 break;
             case 7:
                 if (enemies.isEmpty()) {
+                    ended.play();
                     System.out.println("NO more enemies!");
-                    displayMessage("Tutorial Complete! Good luck!");
+                    displayMessage("Tutorial Complete, Good luck!" + "\n" + "Troop's attributes were amplified for learning purposes.");
                     step++;
                 }
                 break;
             case 8: // End the tutorial
                 if (!waitingForAction) {
                     waitingForAction = true;
-                    Greenfoot.delay(300); // Pause for 100 frames
+                    Greenfoot.delay(300);
                     
                     MenuScreen menuScreen = new MenuScreen();
                     Greenfoot.setWorld(menuScreen);

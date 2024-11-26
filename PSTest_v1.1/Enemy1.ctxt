@@ -6,10 +6,6 @@ comment1.target=Enemy1()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Enemy1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ act()
-<<<<<<< HEAD
 comment3.params=
 comment3.target=void\ isTouchingBorder()
 numComments=4
-=======
-numComments=3
->>>>>>> tutorial

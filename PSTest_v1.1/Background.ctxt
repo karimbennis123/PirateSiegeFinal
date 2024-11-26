@@ -17,12 +17,8 @@ comment6.params=
 comment6.target=int\ getRandomY()
 comment7.params=
 comment7.target=void\ spawnEnemies()
-<<<<<<< HEAD
 comment8.params=
 comment8.target=void\ stopAmbiance()
 comment9.params=message\ x\ y
 comment9.target=void\ showText(java.lang.String,\ int,\ int)
 numComments=10
-=======
-numComments=8
->>>>>>> tutorial

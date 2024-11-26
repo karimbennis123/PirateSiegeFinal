@@ -11,7 +11,7 @@ public class TutorialRecruitSkelly extends Crewmen
     TutorialAmouredUpgrade armorUpgrade =  new  TutorialAmouredUpgrade();
     GreenfootImage img = new GreenfootImage("RecruitSkelly_idle1.png");
     GreenfootImage img2 = new GreenfootImage("RecruitSkelly_idle1Highlighted.png");
-    private int healthPoints = 150;
+    private int healthPoints = 500;
     private long lastActionTime = 0; 
     private GifImage gif = new GifImage("SmokeScreen.gif");
     
