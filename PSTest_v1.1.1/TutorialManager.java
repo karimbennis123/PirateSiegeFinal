@@ -41,7 +41,6 @@ public class TutorialManager extends Actor
                 if (Greenfoot.mouseClicked(getWorld().getObjects(TutorialRecruitSkellyButton.class).get(0))) {
                     milestone.play();
                     displayMessage("Good job!" + "\n" + " Now, click any Red arrow to place him.");
-                    System.out.println("Arrows in the world: " + getWorld().getObjects(TutorialArrow.class).size());
                     step++;
                 }
                 break;
@@ -49,9 +48,7 @@ public class TutorialManager extends Actor
                 for (TutorialArrow arrow : arrows) {
                     if (Greenfoot.mouseClicked(arrow)) {
                         milestone.play();
-                        System.out.println("Arrow clicked!");
                         displayMessage("Great!" + "\n" + " Place Another Recruit Skelly in the 2nd row");
-                        System.out.println("Current counter value: " + counter.getValue());
                         step++;
                     }
                 }
@@ -91,7 +88,6 @@ public class TutorialManager extends Actor
                 for (Upgrades upgrade : upgrades) {
                     if (Greenfoot.mouseClicked(upgrade)) {
                         milestone.play();
-                        System.out.println("upgrade clicked!");
                         displayMessage("Good Job!");
                         spawnEnemies();
                         spawnEnemies();
@@ -103,7 +99,6 @@ public class TutorialManager extends Actor
             case 7:
                 if (enemies.isEmpty()) {
                     ended.play();
-                    System.out.println("NO more enemies!");
                     displayMessage("Tutorial Complete, Good luck!" + "\n" + "Troop's attributes were amplified for learning purposes.");
                     step++;
                 }

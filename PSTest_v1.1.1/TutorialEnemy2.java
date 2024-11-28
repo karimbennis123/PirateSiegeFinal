@@ -65,7 +65,6 @@ public class TutorialEnemy2 extends Enemies
         if(healthPoints <= 0){
          TutorialSmallGoldBag gold = new TutorialSmallGoldBag();
          getWorld().addObject(gold, getX() + 100, getY());
-         System.out.println("Removing enemy: " + this);
          if (getWorld() != null) { // Ensure the enemy is still in the world
             getWorld().removeObject(this);
             }

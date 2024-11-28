@@ -23,7 +23,6 @@ public class TutorialArrow extends Buttons
             getWorld().removeObject(this);
         }
         if (Greenfoot.mouseClicked(this)) {
-            System.out.println("Arrow instance clicked!");
             skeletonSound.play();
             List<TutorialArrow> arrows = getWorld().getObjects(TutorialArrow.class);
             TutorialRecruitSkelly skelly1 =  new  TutorialRecruitSkelly();
